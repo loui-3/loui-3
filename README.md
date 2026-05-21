@@ -3,7 +3,7 @@
 ###
 
 <div align="right">
-  <img height="230" src="messi-r10.gif" />
+  <img height="230" padding-top = "30px" src="messi-r10.gif" />
 </div>
 
 ###
