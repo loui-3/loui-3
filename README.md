@@ -2,8 +2,8 @@
 
 ###
 
-<div align="center">
-  <img height="300" src="https://i.giphy.com/media/IioLVBSvJZBxpHM5eg/giphy.gif" />
+<div align="right">
+  <img height="335" src="https://i.giphy.com/media/IioLVBSvJZBxpHM5eg/giphy.gif" />
 </div>
 
 ###
