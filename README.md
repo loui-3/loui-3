@@ -2,7 +2,8 @@
 
 ###
 
-<img align="right" height="332" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHE4YTh3azJ3eHB1OW02eWV5eDhvODI1bDZrbjBzeGNxdnNmeTRpciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IioLVBSvJZBxpHM5eg/giphy.gif"  />
+<div align="center" height="200" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHE4YTh3azJ3eHB1OW02eWV5eDhvODI1bDZrbjBzeGNxdnNmeTRpciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IioLVBSvJZBxpHM5eg/giphy.gif" alt="animated gif" />
+</div>
 
 ###
 
