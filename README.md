@@ -3,7 +3,7 @@
 ###
 
 <div align="right">
-  <img height="330" src="messi-r10.gif" />
+  <img height="300" src="messi-r10.gif" />
 </div>
 
 ###
