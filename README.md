@@ -2,8 +2,8 @@
 
 ###
 
-<div align="right">
-  <img height="230" padding-top = "30px" src="messi-r10.gif" />
+<div align="center">
+  <img height="550" src="messi-r10.gif" />
 </div>
 
 ###
