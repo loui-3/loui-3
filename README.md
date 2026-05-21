@@ -2,7 +2,9 @@
 
 ###
 
-<img align="right" height="335" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHE4YTh3azJ3eHB1OW02eWV5eDhvODI1bDZrbjBzeGNxdnNmeTRpciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IioLVBSvJZBxpHM5eg/giphy.gif"  />
+<div align="center">
+  <img height="335" src="https://media.giphy.com/media/IioLVBSvJZBxpHM5eg/giphy.gif" />
+</div>
 
 ###
 
@@ -32,7 +34,7 @@
 ###
 
 <div align="center">
-  <a href="louiegie,lariosa@gmail.com" target="_blank">
+  <a href="louiegie.lariosa@gmail.com" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
   </a>
   <a href="https://ph.linkedin.com/in/louiegie-lariosa-739483397" target="_blank">
