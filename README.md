@@ -8,8 +8,8 @@
 
 ###
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/loui-3/loui-3/stats-output/stats.svg" height="150" alt="stats graph"  />
+<div align="left">
+  <img src="https://raw.githubusercontent.com/loui-3/loui-3/stats-output/stats.svg" height="150" alt="stats graph" /> <br>
   <img src="https://raw.githubusercontent.com/loui-3/loui-3/languages-output/languages.svg" height="180" alt="languages graph"  />
 </div>
 
