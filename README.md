@@ -28,7 +28,6 @@
 </div>
 
 ---
----
 ## 🧠 About Me
 
 ```python
