@@ -1,59 +1,88 @@
-<h2 align="left">Hi 👋! My name is Loui-3!</h2>
-
-###
+<!-- ═══════════════════════════════════════════════════════════
+     loui-3 — GitHub Profile README
+     ═══════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img height="550" src="messi-r10.gif" />
+██╗      ██████╗ ██╗   ██╗██╗         ██████╗
+██║     ██╔═══██╗██║   ██║██║        ╚════██╗
+██║     ██║   ██║██║   ██║██║  █████  █████╔╝
+██║     ██║   ██║██║   ██║██║  ╚═══╝  ╚═══██╗
+███████╗╚██████╔╝╚██████╔╝██║        ██████╔╝
+╚══════╝ ╚═════╝  ╚═════╝ ╚═╝        ╚═════╝
+
+### hey, i'm **Loui** 👋 — developer & creator from the 🇵🇭
+
+*I build things with code, pixels, and way too much caffeine.*
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:louiegie.lariosa@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://ph.linkedin.com/in/louiegie-lariosa-739483397)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_loui.3/)
+
 </div>
 
-###
+---
 
-<h2 align="left">Stats</h2>
+## 🧠 About Me
+
+```python
+loui = {
+    "name":       "Louiegie Lariosa",
+    "alias":      "loui-3",
+    "location":   "Philippines 🇵🇭",
+    "languages":  ["Python", "JavaScript", "Java", "HTML/CSS"],
+    "tools":      ["Blender", "Godot Engine"],
+    "interests":  ["Game Dev", "3D Art", "Web Dev", "Open Source"],
+    "currently":  "Building cool stuff and learning even cooler things",
+    "fun_fact":   "Messi > everyone 🐐",
+}
+```
+
+---
+
+## 🛠️ Tech Stack
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/loui-3/loui-3/stats-output/stats.svg" height="200" alt="stats graph" /> <br>
-  <img src="https://raw.githubusercontent.com/loui-3/loui-3/languages-output/languages.svg" height="280" alt="languages graph"  />
+
+| Category | Tools |
+|----------|-------|
+| **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) |
+| **Web** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) |
+| **Creative** | ![Blender](https://img.shields.io/badge/Blender-F5792A?style=flat-square&logo=blender&logoColor=white) ![Godot](https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godot-engine&logoColor=white) |
+
 </div>
 
-###
+---
 
-<h2 align="left">Tech Stack</h2>
+## 📊 Stats
+
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" height="30" alt="blender logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" height="30" alt="godot logo"  />
+  <img src="https://raw.githubusercontent.com/loui-3/loui-3/stats-output/stats.svg" height="180" alt="GitHub Stats" />
+  &nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/loui-3/loui-3/languages-output/languages.svg" height="180" alt="Top Languages" />
 </div>
 
-###
+---
 
-<h2 align="left">Connect With Me!!</h2>
+## 🐐 Hall of GOAT
+
 <div align="center">
-  <a href="louiegie.lariosa@gmail.com" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
-  </a>
-  <a href="https://ph.linkedin.com/in/louiegie-lariosa-739483397" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
-  </a>
-  <a href="https://www.instagram.com/_loui.3/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
-  </a>
+  <img height="400" src="messi-r10.gif" alt="Messi x R10 — two GOATs" />
+  <br/>
+  <sub><i>No further explanation needed.</i></sub>
 </div>
 
-###
+---
+
+## 🎮 Contribution Graph
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph.svg">
+  <img alt="Bomberman contribution graph" src="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph.svg">
 </picture>
 
-###
+---
+
+<div align="center">
+  <sub>✨ Thanks for stopping by — drop a ⭐ if something caught your eye!</sub>
+</div>
