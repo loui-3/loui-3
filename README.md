@@ -56,9 +56,9 @@ loui = {
 ## 📊 Stats
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/loui-3/loui-3/stats-output/stats.svg" height="180" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=loui-3&show_icons=true&theme=merko&include_all_commits=true&count_private=true&hide_border=false" height="180" alt="GitHub Stats" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/loui-3/loui-3/languages-output/languages.svg" height="180" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=loui-3&layout=compact&langs_count=5&theme=merko&hide_border=false&custom_title=Languages" height="180" alt="Top Languages" />
 </div>
 
 ---
