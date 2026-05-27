@@ -4,9 +4,9 @@
 
 <div align="center">
 
-### <div style = "font-size: 15px"> hey, i'm Loui 👋 </div>
+#### hey, i'm Loui 👋 </div>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1500&color=FF6B6B&center=true&vCenter=true&width=700&lines=doing+absolutely+nothing+%F0%9F%92%A4;motivational+speaker+%F0%9F%97%A3%EF%B8%8F;instant+noodles+specialist+%F0%9F%8D%9C;professional+bed+tester+%F0%9F%9B%8C;CEO+of+doing+the+bare+minimum+%F0%9F%98%8C)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&pause=1500&color=FF6B6B&center=true&vCenter=true&width=700&lines=doing+absolutely+nothing+%F0%9F%92%A4;motivational+speaker+%F0%9F%97%A3%EF%B8%8F;instant+noodles+specialist+%F0%9F%8D%9C;professional+bed+tester+%F0%9F%9B%8C;CEO+of+doing+the+bare+minimum+%F0%9F%98%8C)](https://git.io/typing-svg)
 
 
 ### developer & creator from the 🇵🇭
@@ -32,12 +32,11 @@
 loui = {
     "name":       "Louiegie Lariosa",
     "alias":      "loui-3",
-    "location":   "Philippines 🇵🇭",
+    "location":   "Philippines",
     "languages":  ["Python", "JavaScript", "Java", "HTML/CSS"],
     "tools":      ["Blender", "Godot Engine"],
-    "interests":  ["Game Dev", "3D Art", "Web Dev", "Open Source"],
+    "interests":  ["Game Dev", "3D Art", "Web Dev"],
     "currently":  "Building cool stuff and learning even cooler things",
-    "fun_fact":   "Messi > everyone 🐐",
 }
 ```
 
@@ -66,8 +65,6 @@ loui = {
 </div>
 
 ---
-
-
 
 ## 🎮 Contribution Graph
 
