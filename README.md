@@ -58,7 +58,7 @@ loui = {
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=loui-3&theme=merko&hide_border=false" height="180" alt="GitHub Streak" />
   &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=loui-3&layout=compact&langs_count=5&theme=merko&hide_border=false" height="180" alt="Top Languages" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs?username=loui-3&layout=compact&langs_count=5&theme=merko&hide_border=false" height="180" alt="Top Languages" />
 </div>
 
 ---
