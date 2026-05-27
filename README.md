@@ -22,6 +22,7 @@
 <div align="center">
   <img height="400" src="messi-r10.gif" alt="Messi x R10 — two GOATs" />
 </div>
+
 ---
 
 ## 🧠 About Me
