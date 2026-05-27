@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=FFFFFF&center=true&vCenter=true&width=500&lines=hey%2C+i'm+Loui+%F0%9F%91%8B;developer+%26+creator+%F0%9F%87%B5%F0%9F%87%AD;code+%7C+pixels+%7C+caffeine+%E2%98%95)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=FFFFFF&center=true&vCenter=true&width=500&lines=hey%2C+i'm+Loui+%F0%9F%91%8B;developer+%26+creator+%F0%9F%87%B5%F0%9F%87%AD;vibes+%7C+create+%7C+and larp)](https://git.io/typing-svg)
 
 ### developer & creator from the 🇵🇭
 *I build things with code, pixels, and way too much caffeine.*
