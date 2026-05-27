@@ -34,7 +34,7 @@ loui = {
     "location":   "Philippines",
     "languages":  ["Python", "JavaScript", "Java", "HTML/CSS"],
     "tools":      ["Blender", "Godot Engine"],
-    "interests":  ["Game Dev", "3D Art", "Web Dev"],
+    "interests":  ["Game Dev", "3D/Pixel Art", "A little bit of Web Dev"],
     "currently":  "Building cool stuff and learning even cooler things (that's prolly a lie.)",
 }
 ```
