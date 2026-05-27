@@ -21,8 +21,11 @@
 ---
 <div align="center">
   <img height="400" src="messi-r10.gif" alt="Messi x R10 — two GOATs" />
+  <br/>
+  <sub><i>"People say I'm never present, I ain't messy, I'm just focused on my goals" -JPEGMA-MA-MAFIA</i></sub>
+  <br/><br/>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=loui-3.loui-3" alt="visitor badge" />
 </div>
-
 ---
 
 ## 🧠 About Me
