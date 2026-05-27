@@ -26,8 +26,9 @@
   <br/><br/>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=loui-3.loui-3" alt="visitor badge" />
 </div>
----
 
+---
+---
 ## 🧠 About Me
 
 ```python
@@ -41,6 +42,7 @@ loui = {
     "currently":  "Building cool stuff and learning even cooler things (that's prolly a lie.)",
 }
 ```
+---
 
 ## 🛠️ Tech Stack
 
