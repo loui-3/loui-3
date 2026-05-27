@@ -38,8 +38,6 @@ loui = {
 }
 ```
 
----
-
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -63,8 +61,6 @@ loui = {
 </div>
 
 ---
-
-## 🎮 Contribution Graph
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph-dark.svg">
