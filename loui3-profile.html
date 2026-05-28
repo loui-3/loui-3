@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>loui-3 — profile.exe</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; font-family: 'VT323', 'Courier New', monospace; margin: 0; padding: 0; }
+  body { background: #008080; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; min-height: 100vh; }
+
+  .window { background: #c0c0c0; border: 2px solid; border-color: #ffffff #808080 #808080 #ffffff; width: 100%; max-width: 740px; }
+  .titlebar { background: #000080; color: #fff; padding: 3px 8px; display: flex; justify-content: space-between; align-items: center; font-size: 16px; user-select: none; }
+  .titlebar-btns { display: flex; gap: 3px; }
+  .tbtn { background: #c0c0c0; border: 1px solid; border-color: #ffffff #808080 #808080 #ffffff; width: 18px; height: 16px; font-size: 11px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #000; }
+  .tbtn:active { border-color: #808080 #ffffff #ffffff #808080; }
+
+  .body { padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .full { grid-column: 1 / -1; }
+  .panel { background: #c0c0c0; border: 2px solid; border-color: #808080 #ffffff #ffffff #808080; padding: 8px 10px; }
+  .panel-label { font-size: 13px; color: #808080; margin-bottom: 3px; }
+  .inset { background: #fff; border: 2px solid; border-color: #808080 #ffffff #ffffff #808080; padding: 4px 8px; margin: 3px 0; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+  .statusbar { background: #c0c0c0; border-top: 2px solid #808080; padding: 3px 8px; display: flex; gap: 8px; font-size: 13px; flex-wrap: wrap; }
+  .sbitem { border: 1px solid; border-color: #808080 #ffffff #ffffff #808080; padding: 1px 8px; }
+
+  .badge { display: inline-flex; align-items: center; gap: 4px; background: #000080; color: #fff; font-size: 13px; padding: 2px 8px; margin: 2px 2px 2px 0; }
+  .skillrow { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+
+  .blink { animation: blink 1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .green { color: #008000; } .red { color: #800000; }
+
+  .about-row { display: flex; gap: 4px; font-size: 14px; margin: 2px 0; }
+  .about-key { color: #000080; min-width: 95px; }
+
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 4px; }
+  .stat-box { background: #fff; border: 2px solid; border-color: #808080 #fff #fff #808080; padding: 4px 6px; text-align: center; }
+  .stat-num { font-size: 22px; color: #000080; }
+  .stat-label { font-size: 12px; color: #808080; }
+
+  .lang-row { display: flex; align-items: center; gap: 6px; margin: 3px 0; font-size: 13px; }
+  .lang-name { width: 85px; flex-shrink: 0; }
+  .bar-wrap { background: #fff; border: 2px solid; border-color: #808080 #fff #fff #808080; height: 14px; flex: 1; overflow: hidden; }
+  .bar-fill { height: 100%; }
+
+  img.icon { width: 16px; height: 16px; image-rendering: pixelated; vertical-align: middle; }
+
+  .social-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .social-btn { display: inline-flex; align-items: center; gap: 6px; background: #c0c0c0; border: 2px solid; border-color: #fff #808080 #808080 #fff; font-family: 'VT323', monospace; font-size: 14px; padding: 3px 10px; cursor: pointer; color: #000; text-decoration: none; }
+  .social-btn:active { border-color: #808080 #fff #fff #808080; }
+
+  .stats-img { max-width: 100%; display: block; margin: 4px auto; }
+
+  /* MOTIVATION BAR */
+  .motiv-wrap { background: #fff; border: 2px solid; border-color: #808080 #fff #fff #808080; height: 22px; position: relative; margin: 4px 0; overflow: hidden; }
+  .motiv-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0%; background: repeating-linear-gradient(90deg, #000080 0px, #000080 10px, #4040c0 10px, #4040c0 12px); transition: width 0.15s linear; }
+  .motiv-pct { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #fff; mix-blend-mode: difference; pointer-events: none; }
+
+  /* GIF PANEL */
+  .gif-frame { margin: 8px; border: 2px solid; border-color: #808080 #fff #fff #808080; position: relative; overflow: hidden; height: 260px; background: #000; }
+  .gif-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gif-overlay { position: absolute; inset: 0; pointer-events: none; }
+  .scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,0.18) 2px, rgba(0,0,0,0.18) 4px); }
+  .vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%); }
+  .win-watermark { position: absolute; top: 6px; left: 6px; display: flex; align-items: center; gap: 4px; background: rgba(0,0,0,0.45); padding: 2px 6px; font-size: 13px; color: #fff; }
+  .win-flag { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 14px; height: 14px; }
+  .win-flag div { border-radius: 1px; }
+  .wf-red { background: #f00; } .wf-green { background: #0a0; } .wf-blue { background: #00f; } .wf-gold { background: #fa0; }
+  .gif-timestamp { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.5); color: #ff0; font-size: 13px; padding: 1px 5px; letter-spacing: 1px; }
+  .visits-overlay { position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-end; padding: 6px 8px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); }
+  .visits-text { color: #fff; font-size: 18px; line-height: 1.2; }
+  .visits-text span { display: block; font-size: 13px; color: #ccc; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ WINDOW 1: PROFILE ═══════════════ -->
+<div class="window">
+  <div class="titlebar">
+    <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width:14px;height:14px;vertical-align:middle;filter:invert(1);margin-right:5px;">loui-3 — profile.exe</span>
+    <div class="titlebar-btns"><div class="tbtn">_</div><div class="tbtn">&#9633;</div><div class="tbtn">&#10005;</div></div>
+  </div>
+  <div class="body">
+
+    <!-- LEFT: INFO -->
+    <div class="panel">
+      <div class="panel-label">C:\&gt; whoami</div>
+      <div class="inset">👤 Louiegie Lariosa</div>
+      <div class="inset" style="color:#808080;font-size:13px;">alias: loui-3</div>
+      <div class="inset" style="font-size:13px;">🇵🇭 Philippines</div>
+      <div class="panel-label" style="margin-top:8px;">C:\&gt; status</div>
+      <div class="inset green">&#9632; online<span class="blink">_</span></div>
+      <div class="panel-label" style="margin-top:8px;">C:\&gt; contact</div>
+      <div class="inset" style="font-size:13px;"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" class="icon"> louiegie.lariosa@gmail.com</div>
+      <div class="inset" style="font-size:13px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="icon"> linkedin/louiegie-lariosa</div>
+      <div class="inset" style="font-size:13px;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon"> instagram/_loui.3</div>
+      <div class="social-row">
+        <a class="social-btn" href="mailto:louiegie.lariosa@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" class="icon"> Gmail</a>
+        <a class="social-btn" href="https://ph.linkedin.com/in/louiegie-lariosa-739483397" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="icon"> LinkedIn</a>
+        <a class="social-btn" href="https://www.instagram.com/_loui.3/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon"> Instagram</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: GIF with overlay -->
+    <div class="panel" style="padding:0;overflow:hidden;">
+      <div class="gif-frame" style="margin:0;height:100%;min-height:260px;">
+        <img src="https://raw.githubusercontent.com/loui-3/loui-3/main/messi-r10.gif" alt="Messi x R10">
+        <div class="gif-overlay">
+          <div class="scanlines"></div>
+          <div class="vignette"></div>
+          <div class="win-watermark">
+            <div class="win-flag">
+              <div class="wf-red"></div><div class="wf-green"></div>
+              <div class="wf-blue"></div><div class="wf-gold"></div>
+            </div>
+            Windows 98
+          </div>
+          <div class="gif-timestamp" id="gifTs"></div>
+          <div class="visits-overlay">
+            <div class="visits-text">
+              <span>profile visits</span>
+              👤 286
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="statusbar">
+    <span class="sbitem">&#9632; Ready</span>
+    <span class="sbitem">v1.0</span>
+    <span class="sbitem" id="clock"></span>
+    <span class="sbitem" id="dateDisp"></span>
+  </div>
+</div>
+
+<!-- ═══════════════ WINDOW 2: ABOUT ME ═══════════════ -->
+<div class="window">
+  <div class="titlebar">
+    <span>📄 about_me.txt — Notepad</span>
+    <div class="titlebar-btns"><div class="tbtn">_</div><div class="tbtn">&#9633;</div><div class="tbtn">&#10005;</div></div>
+  </div>
+  <div class="body">
+    <div class="panel full">
+      <div class="panel-label">C:\&gt; cat about_me.txt</div>
+      <div class="about-row"><span class="about-key">name</span><span>= "Louiegie Lariosa"</span></div>
+      <div class="about-row"><span class="about-key">alias</span><span>= "loui-3"</span></div>
+      <div class="about-row"><span class="about-key">location</span><span>= "Philippines 🇵🇭"</span></div>
+      <div class="about-row"><span class="about-key">languages</span><span>= ["Python", "JS", "Java", "HTML/CSS"]</span></div>
+      <div class="about-row"><span class="about-key">tools</span><span>= ["Blender", "Godot Engine"]</span></div>
+      <div class="about-row"><span class="about-key">interests</span><span>= ["Game Dev", "3D Art", "Web Dev", "Open Source"]</span></div>
+      <div class="about-row"><span class="about-key">currently</span><span>= "Building cool stuff"</span></div>
+      <div class="about-row"><span class="about-key">fun_fact</span><span>= "Messi &gt; everyone 🐐"</span></div>
+      <div class="about-row"><span class="about-key">job_title</span><span class="red">= "CEO of doing the bare minimum"</span></div>
+    </div>
+    <div class="panel full">
+      <div class="panel-label">C:\&gt; skills --list</div>
+      <div class="skillrow">
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icon">Python</span>
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon">JavaScript</span>
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="icon">Java</span>
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icon">HTML5</span>
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="icon">CSS3</span>
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" class="icon">Blender</span>
+        <span class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" class="icon">Godot</span>
+      </div>
+    </div>
+    <div class="panel full">
+      <div class="panel-label">C:\&gt; motivation.exe</div>
+      <div class="motiv-wrap">
+        <div class="motiv-fill" id="motivFill"></div>
+        <div class="motiv-pct" id="motivPct">0%</div>
+      </div>
+      <div style="font-size:13px;color:#808080;" id="motivStatus">Initializing...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ WINDOW 3: STATS ═══════════════ -->
+<div class="window">
+  <div class="titlebar">
+    <span>📊 stats.exe — Task Manager</span>
+    <div class="titlebar-btns"><div class="tbtn">_</div><div class="tbtn">&#9633;</div><div class="tbtn">&#10005;</div></div>
+  </div>
+  <div class="body">
+    <div class="panel">
+      <div class="panel-label">C:\&gt; git log --stats</div>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="stat-num">94</div><div class="stat-label">total commits</div></div>
+        <div class="stat-box"><div class="stat-num green">1</div><div class="stat-label">day streak</div></div>
+        <div class="stat-box"><div class="stat-num red">4</div><div class="stat-label">longest streak</div></div>
+      </div>
+      <div class="panel-label" style="margin-top:8px;">coding since</div>
+      <div class="inset" style="font-size:13px;">📅 Jul 11, 2025 — Present</div>
+    </div>
+    <div class="panel">
+      <div class="panel-label">C:\&gt; git linguist</div>
+      <div class="lang-row"><span class="lang-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon"> JS</span><div class="bar-wrap"><div class="bar-fill" style="width:45%;background:#f0db4f;"></div></div><span>45%</span></div>
+      <div class="lang-row"><span class="lang-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icon"> Python</span><div class="bar-wrap"><div class="bar-fill" style="width:30%;background:#3572A5;"></div></div><span>30%</span></div>
+      <div class="lang-row"><span class="lang-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icon"> HTML</span><div class="bar-wrap"><div class="bar-fill" style="width:15%;background:#e34c26;"></div></div><span>15%</span></div>
+      <div class="lang-row"><span class="lang-name"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="icon"> Java</span><div class="bar-wrap"><div class="bar-fill" style="width:10%;background:#b07219;"></div></div><span>10%</span></div>
+    </div>
+    <div class="panel full">
+      <div class="panel-label">C:\&gt; streak --card</div>
+      <img class="stats-img" src="https://streak-stats.demolab.com?user=loui-3&theme=merko&hide_border=false" alt="GitHub Streak" style="max-height:180px;">
+    </div>
+    <div class="panel full">
+      <div class="panel-label">C:\&gt; langs --card</div>
+      <img class="stats-img" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs?username=loui-3&layout=compact&langs_count=5&theme=merko&hide_border=false" alt="Top Languages" style="max-height:180px;">
+    </div>
+  </div>
+  <div class="statusbar">
+    <span class="sbitem">&#9632; 3 processes running</span>
+    <span class="sbitem">RAM: 640KB free</span>
+  </div>
+</div>
+
+<!-- ═══════════════ WINDOW 4: CONTRIBUTION GRAPH ═══════════════ -->
+<div class="window">
+  <div class="titlebar">
+    <span>🎮 contribution_graph.exe — Bomberman</span>
+    <div class="titlebar-btns"><div class="tbtn">_</div><div class="tbtn">&#9633;</div><div class="tbtn">&#10005;</div></div>
+  </div>
+  <div class="body">
+    <div class="panel full">
+      <div class="panel-label">C:\&gt; bomberman --contributions</div>
+      <div style="background:#fff;border:2px solid;border-color:#808080 #fff #fff #808080;padding:10px;text-align:center;">
+        <img src="https://raw.githubusercontent.com/loui-3/loui-3/pacman-output/bomberman-contribution-graph.svg" alt="Bomberman contribution graph" style="max-width:100%;display:block;margin:0 auto;">
+      </div>
+    </div>
+  </div>
+  <div class="statusbar"><span class="sbitem">&#9632; Auto-updates every 12h</span></div>
+</div>
+
+<script>
+  function pad(n) { return String(n).padStart(2,'0'); }
+
+  function updateClock() {
+    const now = new Date();
+    document.getElementById('clock').textContent = now.toLocaleTimeString();
+    document.getElementById('dateDisp').textContent = now.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
+    document.getElementById('gifTs').textContent = `${pad(now.getMonth()+1)}/${pad(now.getDate())}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+  }
+  updateClock(); setInterval(updateClock, 1000);
+
+  // MOTIVATION BAR
+  const motivSteps = [
+    "Searching for motivation...",
+    "Found 0 results. Retrying...",
+    "Downloading excuses.dll...",
+    "Installing procrastination.exe...",
+    "Motivation.exe has stopped working",
+    "Rebooting willpower...",
+    "Loading... please wait...",
+    "Error: motivation not found",
+    "Giving up gracefully...",
+    "Done. Maybe tomorrow."
+  ];
+  const fill  = document.getElementById('motivFill');
+  const pctEl = document.getElementById('motivPct');
+  const statEl = document.getElementById('motivStatus');
+  const total = 8000;
+  const start = performance.now();
+
+  function motivTick(now) {
+    const t = Math.min((now - start) / total, 1);
+    const pct = t * 100;
+    fill.style.width = pct + '%';
+    pctEl.textContent = Math.round(pct) + '%';
+    statEl.textContent = motivSteps[Math.min(Math.floor(t * motivSteps.length), motivSteps.length - 1)];
+    if (t < 1) requestAnimationFrame(motivTick);
+  }
+  requestAnimationFrame(motivTick);
+</script>
+</body>
+</html>
