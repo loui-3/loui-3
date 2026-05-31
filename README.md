@@ -17,7 +17,6 @@
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_loui.3/)
 
 </div>
-#
 ---
 <div align="center">
   <img height="400" src="messi-r10.gif" alt="Messi x R10 — two GOATs" />
